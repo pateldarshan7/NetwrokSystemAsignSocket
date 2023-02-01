@@ -1,0 +1,497 @@
+{
+    "meta": {
+        "__export_time": 1665338618549,
+        "__export_app": "firecamp_v2.7.1 ",
+        "__export_version": 1
+    },
+    "project": {
+        "name": "System Assign",
+        "description": "",
+        "auth": {},
+        "scripts": {
+            "pre": "",
+            "post": "",
+            "test": ""
+        },
+        "meta": {
+            "active_auth": "no_auth"
+        }
+    },
+    "modules": [],
+    "requests": [
+        {
+            "meta": {
+                "name": "SYSTEM ASSIGN",
+                "description": "",
+                "type": "socketio",
+                "version": "2.0"
+            },
+            "url": {
+                "slashes": true,
+                "protocol": "http:",
+                "hash": "",
+                "pathname": "/",
+                "auth": "",
+                "host": "localhost:4000",
+                "port": "4000",
+                "hostname": "localhost",
+                "password": "",
+                "username": "",
+                "origin": "http://localhost:4000",
+                "href": "http://localhost:4000/",
+                "path_params": [],
+                "query_params": []
+            },
+            "config": {
+                "version": "v4",
+                "rejectUnauthorized": false,
+                "timeout": 20000,
+                "reconnection": false,
+                "reconnectionAttempts": 3,
+                "reconnectionDelay": 1000,
+                "reconnectionDelayMax": 5000,
+                "on_connect_listeners": [
+                    "response"
+                ]
+            },
+            "connections": [
+                {
+                    "name": "Default",
+                    "forceNew": false,
+                    "namespace": "",
+                    "path": "",
+                    "ping": false,
+                    "ping_interval": 3000,
+                    "transports": {
+                        "websocket": true,
+                        "polling": true
+                    },
+                    "headers": [
+                        {
+                            "key": "token",
+                            "value": "",
+                            "disable": true,
+                            "type": "text"
+                        }
+                    ],
+                    "query_params": [],
+                    "auth": [
+                        {
+                            "key": "token",
+                            "value": "",
+                            "disable": true,
+                            "type": "text"
+                        }
+                    ],
+                    "is_default": true
+                }
+            ],
+            "listeners": [
+                "response"
+            ],
+            "emitter_collection": [
+                {
+                    "name": "USER",
+                    "meta": {},
+                    "children": [
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"signup\",\n    \"data\": {\n        \"Email\": \"Deeppoossss@gmail.com\",\n        \"Password\": \"12345\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "SIGNUP",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"updateuser\",\n    \"data\": {\n         \"_id\":\"6342b5a7fa1cc970c914cd36\",\n        \"Email\": \"Deep patel@gmail.com\",\n        \"Password\": \"12345\"\n    }\n}   "
+                                }
+                            ],
+                            "meta": {
+                                "label": "UPDATE USER",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"deleteuser\",\n    \"data\": {\n         \"_id\":\"6342b5a7fa1cc970c914cd36\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "DELETE USER",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"login\",\r\n    \"data\": {\r\n        \"Email\": \"Darshan@gmail.com\",\r\n        \"Password\": \"12345\"\r\n    }\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "LOGIN",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"viewuser\",\r\n    \"data\": {\r\n}\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "VIEW USERS",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MONITER",
+                    "meta": {},
+                    "children": [
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"addmoniter\",\n    \"data\": {\n        \"MoniterName\": \"Dell LCD\",\n        \"ModelNo\": \"Delll32FHD\",\n        \"CreatedBy\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "ADD MONITER",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"deletemoniter\",\r\n    \"data\": {\r\n         \"_id\":\"633ec7ade26dfd2c75566828\"\r\n    }\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "DELETE MONITER",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"updatemoniter\",\n    \"data\": {\n        \"_id\":\"6342b92a8ca417277bf1f7be\",\n        \"MoniterName\": \"HP Pavelian\",\n        \"ModelNo\": \"HPFHD43\",\n        \"CreatedBy\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}\n"
+                                }
+                            ],
+                            "meta": {
+                                "label": "UPDATE MONITER",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"viewmoniter\",\r\n    \"data\": {}\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "VIEW MONITERS",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "CPU",
+                    "meta": {},
+                    "children": [
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"deletecpu\",\r\n    \"data\": {\r\n         \"_id\":\"633ecc23d9db519183af0862\"\r\n    }\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "DELETE CPU",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"updatecpu\",\n    \"data\": {\n        \"_id\":\"6342baaa8ca417277bf1f7c1\",\n        \"CpuName\": \"Dell inspirionFHD34\",\n        \"ModelNo\": \"DellFHD34\",\n        \"Processor\": \"DellFHD34\",\n        \n        \"CreatedBy\": \"633d682c633e728222452c4c\"\n    }\n}\n"
+                                }
+                            ],
+                            "meta": {
+                                "label": "UPDATE CPU",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"viewcpus\",\r\n    \"data\": {}\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "VIEW CPUS",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"addcpu\",\n    \"data\": {\n        \"CpuName\": \"Dell i7 12Gen\",\n        \"ModelNo\": \"DelI72022\",\n        \"Processor\": \"intel i7 12\",\n        \"CreatedBy\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "ADD CPU",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "MOUSE",
+                    "meta": {},
+                    "children": [
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"addmouse\",\n    \"data\": {\n        \"MouseName\": \"Dell Magic Mouse\",\n        \"ModelNo\": \"Dell WMM 2022\",\n        \"CreatedBy\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "ADD MOUSE",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"deletemouse\",\n    \"data\": {\n         \"_id\":\"6342bc428ca417277bf1f7c4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "DELETE MOUSE",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"viewemouse\",\r\n    \"data\": {}\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "VIEW MOUSE",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"updatemouse\",\n    \"data\": {\n       \"_id\":\"6342bc428ca417277bf1f7c4\",\n        \"MouseName\": \"Apple Magic Mouse\",\n        \"ModelNo\": \"Apple MM2023\",\n        \"CreatedBy\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "UPDATE MOUSE",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                },
+                {
+                    "name": "ASSIGN SYSTEM",
+                    "meta": {},
+                    "children": [
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"addassignsys\",\n    \"data\": {\n        \"MoniterId\": \"6342b8908ca417277bf1f7bc\",\n        \"CpuId\": \"6342ba058ca417277bf1f7bf\",\n        \"MouseId\": \"6342bbd48ca417277bf1f7c2\",\n        \"AssignToUserId\": \"6342c183d0edf80351ee539e\"\n        \n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "ADD ASSIGN SYSTEM",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\n    \"event\": \"updateassignsys\",\n    \"data\": {\n        \"_id\": \"634309077d87260e86df5750\",\n        \"MoniterId\": \"633ddbad9e3b7cb0dd6dcd610\",\n        \"CpuId\": \"633f23f51d450c24e625d67ed\",\n        \"MouseId\": \"633f1d1f0b9bcbcabacda8a7c\",\n        \"AssignToUserId\": \"6342b4f51e684d3b451a8ae4\"\n    }\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "UPDATE ASSIGN SYSTEM",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"vieweassignsys\",\r\n    \"data\": {}\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "VIEW ASSIGN SYSTEM",
+                                "interval": "",
+                                "ack": false
+                            }
+                        },
+                        {
+                            "name": "request",
+                            "body": [
+                                {
+                                    "meta": {
+                                        "type": "json",
+                                        "envelope": ""
+                                    },
+                                    "payload": "{\r\n    \"event\": \"deleteassignsys\",\r\n    \"data\": {\r\n         \"_id\":\"633f3be5f385125da52261b8\"\r\n    }\r\n}"
+                                }
+                            ],
+                            "meta": {
+                                "label": "DELETE ASSIGN SYSTEM",
+                                "interval": "",
+                                "ack": false
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "environments": [
+        {
+            "name": "Production",
+            "variables": {
+                "variable_name": "variable_value"
+            }
+        },
+        {
+            "name": "Development",
+            "variables": {
+                "variable_name": "variable_value"
+            }
+        }
+    ]
+}
